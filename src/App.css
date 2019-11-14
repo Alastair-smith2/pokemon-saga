@@ -1,22 +1,59 @@
-.App {
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "favourites search user"
+    "favourites search user"
+    "favourites search .";
+}
+
+.favourites {
+  grid-area: favourites;
+}
+
+.search {
+  justify-content: center;
+  grid-area: search;
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+
+.search-container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.pokemon-result {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user {
+  grid-area: user;
+}
+
+.pokemon-favourite-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-comment {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.add-button {
+  margin: 1rem 0;
+}
+
+.comment-item {
+  margin: 0.8rem;
+  padding: 0.5rem;
 }
